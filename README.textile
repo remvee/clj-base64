@@ -2,14 +2,25 @@ h1. clj-base64
 
 Functions to encode and decode base64 strings.
 
+
 h2. Usage
 
 <pre>
 (use 'remvee.base64)
-
 (encode-str "I 8> clojure!") ; => "SSA4PiBjbG9qdXJlIQ=="
 (decode-str "SSA4PiBjbG9qdXJlIQ==") ; => "I 8> clojure!"
 </pre>
+
+
+h2. Installation
+
+Drop the following dependency in your <code>project.clj</code> at the
+appropriate place:
+
+<pre>
+[clj-base64 "0.0.0-SNAPSHOT"]
+</pre>
+
 
 h2. License
 
