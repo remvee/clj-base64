@@ -26,7 +26,7 @@
 
 (defn encode
   "Encode sequence of characters to a padded sequence of base64
-encoded characters."
+  encoded characters."
   {:test #(doseq [[plain encoded] test-data]
             (is (= (encode (seq plain)) (seq encoded))))}
   [string]
@@ -46,8 +46,8 @@ encoded characters."
   (apply str (encode string)))
 
 (defn decode
-  "Decode sequence of base64 encoded characters to a sequence
-characters.  Padding characters and whitespace is ignored."
+  "Decode sequence of base64 encoded characters to a sequence of
+  characters.  Padding characters and whitespace is ignored."
   {:test #(doseq [[plain encoded] test-data]
             (is (= (decode (seq encoded)) (seq plain))))}
   [string]
