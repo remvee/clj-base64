@@ -25,8 +25,8 @@
        ("Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." "TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2ljaW5nIGVsaXQsIHNlZCBkbyBlaXVzbW9kIHRlbXBvciBpbmNpZGlkdW50IHV0IGxhYm9yZSBldCBkb2xvcmUgbWFnbmEgYWxpcXVhLiBVdCBlbmltIGFkIG1pbmltIHZlbmlhbSwgcXVpcyBub3N0cnVkIGV4ZXJjaXRhdGlvbiB1bGxhbWNvIGxhYm9yaXMgbmlzaSB1dCBhbGlxdWlwIGV4IGVhIGNvbW1vZG8gY29uc2VxdWF0LiBEdWlzIGF1dGUgaXJ1cmUgZG9sb3IgaW4gcmVwcmVoZW5kZXJpdCBpbiB2b2x1cHRhdGUgdmVsaXQgZXNzZSBjaWxsdW0gZG9sb3JlIGV1IGZ1Z2lhdCBudWxsYSBwYXJpYXR1ci4gRXhjZXB0ZXVyIHNpbnQgb2NjYWVjYXQgY3VwaWRhdGF0IG5vbiBwcm9pZGVudCwgc3VudCBpbiBjdWxwYSBxdWkgb2ZmaWNpYSBkZXNlcnVudCBtb2xsaXQgYW5pbSBpZCBlc3QgbGFib3J1bS4=")))
 
 (defn encode
-  "Encode sequence of characters to a padded sequence of base64
-  encoded characters."
+  "Encode sequence of characters to a sequence of base64 encoded
+  characters."
   {:test #(doseq [[plain encoded] test-data]
             (is (= (encode (seq plain)) (seq encoded))))}
   [string]
@@ -42,12 +42,12 @@
       (concat r (lazy-seq (encode (drop 3 string)))))))
 
 (defn encode-str [string]
-  "Encode a string to a padding base64 encoded string."
+  "Encode a string to a base64 encoded string."
   (apply str (encode string)))
 
 (defn decode
   "Decode sequence of base64 encoded characters to a sequence of
-  characters.  Padding characters and whitespace is ignored."
+  characters."
   {:test #(doseq [[plain encoded] test-data]
             (is (= (decode (seq encoded)) (seq plain))))}
   [string]
