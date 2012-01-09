@@ -1,4 +1,4 @@
-(defproject clj-base64 "0.0.1"
+(defproject clj-base64 "0.0.2"
   :description "Functions to encode and decode base64 strings."
 
   :dependencies [[org.clojure/clojure "1.3.0"]]
