@@ -34,7 +34,10 @@
     nil
     (let [t (take 3 string)
           v (int (reduce (fn [a b] (+ (bit-shift-left (int a) 8) (int b))) t))
-          f #(nth alphabet (bit-and (bit-shift-right v %) 0x3f))
+          f #(nth alphabet (bit-and (if (> % 0)
+                                      (bit-shift-right v %)
+                                      (bit-shift-left v (* % -1)))
+                                    0x3f))
           r (condp = (count t)
               1 (concat (map f '(2 -4))    '(\= \=))
               2 (concat (map f '(10 4 -2)) '(\=))
