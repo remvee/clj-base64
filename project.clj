@@ -1,7 +1,7 @@
-(defproject clj-base64 "0.0.2"
+(defproject clj-base64 "0.0.3"
   :description "Functions to encode and decode base64 strings."
 
-  :dependencies [[org.clojure/clojure "1.3.0"]]
+  :dependencies [[org.clojure/clojure "1.9.0"]]
   
   :autodoc {:description "Functions to encode and decode base64 strings."
             :copyright "Copyright (c) Remco van 't Veer."

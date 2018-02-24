@@ -1,5 +1,3 @@
-pom.xml
-*jar
-lib
-classes
-autodoc
+/.lein-failures
+/.nrepl-port
+/target
