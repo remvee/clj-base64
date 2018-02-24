@@ -1,28 +1,26 @@
-h1. clj-base64
+[![Clojars Project](https://img.shields.io/clojars/v/clj-base64.svg)](https://clojars.org/clj-base64)
+
+# clj-base64
 
 Functions to encode and decode base64 strings.
 
 
-h2. Usage
+## Usage
 
-<pre>
-(use 'remvee.base64)
-(encode-str "I 8> clojure!") ; => "SSA4PiBjbG9qdXJlIQ=="
-(decode-str "SSA4PiBjbG9qdXJlIQ==") ; => "I 8> clojure!"
-</pre>
+    (use 'remvee.base64)
+    (encode-str "I 8> clojure!") ; => "SSA4PiBjbG9qdXJlIQ=="
+    (decode-str "SSA4PiBjbG9qdXJlIQ==") ; => "I 8> clojure!"
 
 
-h2. Installation
+## Installation
 
 Drop the following dependency in your <code>project.clj</code> at the
 appropriate place:
 
-<pre>
-[clj-base64 "0.0.0-SNAPSHOT"]
-</pre>
+    [clj-base64 "0.0.3"]
 
 
-h2. License
+## License
 
 Copyright (c) Remco van 't Veer. All rights reserved.
 

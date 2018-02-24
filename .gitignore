@@ -1,3 +1,6 @@
 /.lein-failures
 /.nrepl-port
 /target
+/README.html
+/pom.xml
+/pom.xml.asc
